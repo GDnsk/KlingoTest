@@ -19,6 +19,8 @@ namespace KlingoTest
             value = StringUtils.RemoveWhiteSpace(word);
 
             IsPreposition = KlingoWordClassifier.CheckIfPreposition(word);
+
+            IsVerb = KlingoWordClassifier.CheckIfVerb(word);
         }
 
 

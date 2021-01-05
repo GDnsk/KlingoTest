@@ -28,6 +28,21 @@ namespace KlingoTest
             return results;
         }
 
+        public static List<KlingoWord> GetVerbs(List<KlingoWord> words)
+        {
+            List<KlingoWord> results = new List<KlingoWord>();
+
+            foreach (KlingoWord word in words)
+            {
+                if (word.IsVerb)
+                {
+                    results.Add(word);
+                }
+            }
+
+            return results;
+        }
+
         public static List<KlingoWord> WordInitializer(List<string> words)
         {
             List<KlingoWord> results = new List<KlingoWord>();

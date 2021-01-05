@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace KlingoTest
 {
@@ -6,7 +8,12 @@ namespace KlingoTest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<string> words = StringUtils.SplitTextIntoWords(KlingoLanguage.textB, ' ');
+            List<KlingoWord> klingoWords = KlingoLanguage.WordInitializer(words);
+            List<KlingoWord> prepositions = KlingoLanguage.GetPropositions(klingoWords);
+
+            Console.WriteLine(prepositions.Count);
+
         }
     }
 }

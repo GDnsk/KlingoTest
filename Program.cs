@@ -10,11 +10,18 @@ namespace KlingoTest
         {
             List<string> words = StringUtils.SplitTextIntoWords(KlingoLanguage.textB, ' ');
             List<KlingoWord> klingoWords = KlingoLanguage.WordInitializer(words);
+
             List<KlingoWord> prepositions = KlingoLanguage.GetPropositions(klingoWords);
             List<KlingoWord> verbs = KlingoLanguage.GetVerbs(klingoWords);
             List<KlingoWord> firstPersonVerbs = KlingoLanguage.GetFirstPersonVerbs(klingoWords);
 
-            Console.WriteLine(firstPersonVerbs.Count);
+            List<KlingoWord> sortedKWords = KlingoSorter.SortAlphabetically(klingoWords);
+
+            string sortedText = KlingoLanguage.KlingoWordsListToText(sortedKWords);
+
+
+
+            Console.WriteLine(sortedText);
 
         }
     }

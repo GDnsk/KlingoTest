@@ -29,7 +29,6 @@ namespace KlingoTest
         public static List<KlingoWord> SortAlphabetically(List<KlingoWord> words)
         {
             words.Sort((x, y) => Compare(x.value, y.value));
-            //words.Sort(Compare);
             return words;
         }
     }

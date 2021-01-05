@@ -63,6 +63,21 @@ namespace KlingoTest
             return results;
         }
 
+        public static List<KlingoWord> GetGoodNumbers(List<KlingoWord> words)
+        {
+            List<KlingoWord> results = new List<KlingoWord>();
+
+            foreach (KlingoWord word in words)
+            {
+                if (word.IsGoodNumber)
+                {
+                    results.Add(word);
+                }
+            }
+
+            return results;
+        }
+
         public static List<KlingoWord> WordInitializer(List<string> words)
         {
             List<KlingoWord> results = new List<KlingoWord>();

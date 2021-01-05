@@ -14,14 +14,12 @@ namespace KlingoTest
             List<KlingoWord> prepositions = KlingoLanguage.GetPropositions(klingoWords);
             List<KlingoWord> verbs = KlingoLanguage.GetVerbs(klingoWords);
             List<KlingoWord> firstPersonVerbs = KlingoLanguage.GetFirstPersonVerbs(klingoWords);
-
             List<KlingoWord> sortedKWords = KlingoSorter.SortAlphabetically(klingoWords);
-
             string sortedText = KlingoLanguage.KlingoWordsListToText(sortedKWords);
 
+            List<KlingoWord> goodNumbers = KlingoLanguage.GetGoodNumbers(klingoWords);
 
-
-            Console.WriteLine(sortedText);
+            int distictsGoodNumbersCount = goodNumbers.Select(x => x.value).Distinct().ToList().Count;
 
         }
     }

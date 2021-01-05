@@ -43,6 +43,21 @@ namespace KlingoTest
             return results;
         }
 
+        public static List<KlingoWord> GetFirstPersonVerbs(List<KlingoWord> words)
+        {
+            List<KlingoWord> results = new List<KlingoWord>();
+
+            foreach (KlingoWord word in words)
+            {
+                if (word.IsFirstPersonVerb)
+                {
+                    results.Add(word);
+                }
+            }
+
+            return results;
+        }
+
         public static List<KlingoWord> WordInitializer(List<string> words)
         {
             List<KlingoWord> results = new List<KlingoWord>();

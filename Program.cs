@@ -8,12 +8,13 @@ namespace KlingoTest
     {
         static void Main(string[] args)
         {
-            List<string> words = StringUtils.SplitTextIntoWords(KlingoLanguage.textA, ' ');
+            List<string> words = StringUtils.SplitTextIntoWords(KlingoLanguage.textB, ' ');
             List<KlingoWord> klingoWords = KlingoLanguage.WordInitializer(words);
             List<KlingoWord> prepositions = KlingoLanguage.GetPropositions(klingoWords);
             List<KlingoWord> verbs = KlingoLanguage.GetVerbs(klingoWords);
+            List<KlingoWord> firstPersonVerbs = KlingoLanguage.GetFirstPersonVerbs(klingoWords);
 
-            Console.WriteLine(verbs.Count);
+            Console.WriteLine(firstPersonVerbs.Count);
 
         }
     }

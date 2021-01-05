@@ -21,6 +21,8 @@ namespace KlingoTest
             IsPreposition = KlingoWordClassifier.CheckIfPreposition(word);
 
             IsVerb = KlingoWordClassifier.CheckIfVerb(word);
+
+            IsFirstPersonVerb = KlingoWordClassifier.CheckIfFirstPersonVerb(word);
         }
 
 

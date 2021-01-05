@@ -71,6 +71,16 @@ namespace KlingoTest
             return chars.Contains(word.Last());
         }
 
+        /// <summary>
+        /// Compare a word first Character with a list of char,
+        /// </summary>
+        /// <param name="word">String to compare</param>
+        /// <param name="chars">list of characters to compare</param>
+        public static bool CheckIfStartsWithListOfChars(string word, List<char> chars)
+        {
+            return chars.Contains(word[0]);
+        }
+
 
     }
 }

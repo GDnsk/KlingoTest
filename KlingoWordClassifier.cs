@@ -30,5 +30,16 @@ namespace KlingoTest
 
             return true;
         }
+
+        public static bool CheckIfFirstPersonVerb(string word)
+        {
+            // Must be a verb
+            if (CheckIfVerb(word) == false) return false;
+
+            // Must not start with fooLetters
+            if (StringUtils.CheckIfStartsWithListOfChars(word, KlingoLanguage.fooLetters) == true) return false;
+
+            return true;
+        }
     }
 }
